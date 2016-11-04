@@ -1,7 +1,7 @@
 <?php
 namespace frontend\models;
 
-use Yii\db\ActiveRecord;
+use yii\db\ActiveRecord;
 /**
 * 
 */

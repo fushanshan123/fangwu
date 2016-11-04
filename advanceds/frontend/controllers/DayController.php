@@ -4,7 +4,7 @@ use yii\data\Pagination;             //分页类
 namespace frontend\controllers;
 
 use yii\web\Controller;
-
+use Yii;
 use yii\db\Query;
 use frontend\models\Book;
 
@@ -19,7 +19,7 @@ class DayController extends Controller
      */
     public function actionShow(){
     	$query = Book::find();           //查表
-
+        // var_dump($query);die;
         $pagination = new Pagination([
             'defaultPageSize' => 3,
             'totalCount' => $query->count(),
@@ -41,7 +41,7 @@ class DayController extends Controller
     public function actionInset(){
     	//添加
     	$data = $_POST;
-    	$db = \Yii::$app->db;
+    	$db = Yii::$app->db;
     	$db->createCommand()->insert('book', $data)->execute();   //执行添加入库
     	$this->redirect('index.php?r=day/show');                  //跳转到展示方法
     }
@@ -49,7 +49,7 @@ class DayController extends Controller
     public function actionDel(){
     	//删除
     	$id = $_GET['id'];
-    	$db = \Yii::$app->db;
+    	$db = Yii::$app->db;
     	$db->createCommand()->delete('book','id='.$id)->execute();      //render渲染模板
     	$this->redirect('index.php?r=day/show');  
         //  if($res)
