@@ -1,1 +1,0 @@
-AdController.php
