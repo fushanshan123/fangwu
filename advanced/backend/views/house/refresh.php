@@ -7,7 +7,7 @@ use yii\helpers\Url;
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include('assets/pub_code/head.php');?>
+	<?php include('assets/pub_code/head.php');?>
 	<body>
 		<?php include('assets/pub_code/top.php');?>
 
@@ -40,7 +40,6 @@ use yii\helpers\Url;
 					</div><!-- #sidebar-shortcuts -->
 
 					<?php include('assets/pub_code/menu.php');?>
-					
 					<!-- /.nav-list -->
 
 					<div class="sidebar-collapse" id="sidebar-collapse">
@@ -63,47 +62,74 @@ use yii\helpers\Url;
 								<i class="icon-home home-icon"></i>
 								<a href="#">首页</a>
 							</li>
-							<li class="active">后台管理控制台</li>
+							<li class="active">房源管理</li>
+                            <li class="active">刷新记录</li>
 						</ul><!-- .breadcrumb -->
 					</div>
 
 					<div class="page-content">
-						<div class="page-header">
-							<h1>
-								控制台
-								<small>
-									<i class="icon-double-angle-right"></i>
-									 查看
-								</small>
-							</h1>
-						</div><!-- /.page-header -->
-
-						<div class="row">
-							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-
-								<div class="alert alert-block alert-success">
-									<button type="button" class="close" data-dismiss="alert">
-										<i class="icon-remove"></i>
-									</button>
-
-									<i class="icon-ok green"></i>
-
-									欢迎使用
-									<strong class="green">
-										安居客房源系统
-									<small>(v1.2)</small>
-									</strong>
-									,这里为你提供更更全面的房源信息管理.	
-							  </div>
 
 
+								<div class="row">
+									<div class="col-xs-12">
+											<button class="btn" type="reset">
+												<i class="icon-undo bigger-110"></i>
+												重新获取
+											</button>
+										<div class="table-responsive">
+											<table id="sample-table-1" class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+														<th class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</th>
+														<th>编号</th>
+														<th>刷新房源</th>
+														<th>租售</th>
+														<th>发布时间</th>
+													</tr>
+												</thead>
 
+												<tbody>
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
 
+														<td>A001</td>
+														<td>博山小区</td>
+														<td>出租</td>
+														<td>10/06/2011</td>
 
-								<!-- PAGE CONTENT ENDS -->
-							</div><!-- /.col -->
-						</div><!-- /.row -->
+													</tr>
+													
+																										<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>A001</td>
+														<td>幸福小区</td>
+														<td>出售</td>
+														<td>20/06/2012</td>
+
+													</tr>
+
+													
+												</tbody>
+											</table>
+										</div><!-- /.table-responsive -->
+									</div><!-- /span -->
+								</div><!-- /row -->
 					</div><!-- /.page-content -->
 				</div><!-- /.main-content -->
 
@@ -166,7 +192,6 @@ use yii\helpers\Url;
 		<!--[if !IE]> -->
 
 		<script src="assets/js/jquery-2.0.3.min.js"></script>
-
 		<!-- <![endif]-->
 
 		<!--[if IE]>

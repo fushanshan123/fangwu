@@ -7,9 +7,110 @@ use yii\helpers\Url;
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include('assets/pub_code/head.php');?>
+	<head>
+		<meta charset="utf-8" />
+		<title>后台管理</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- basic styles -->
+		<!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" /> -->
+		 <?=Html::cssFile('@web/assets/css/bootstrap.min.css')?>
+		<!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css" /> -->
+		 <?=Html::cssFile('@web/assets/css/font-awesome.min.css')?>
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+		<!-- ace styles -->
+		 <?=Html::cssFile('@web/assets/css/ace.min.css')?>
+		 <?=Html::cssFile('@web/assets/css/ace-rtl.min.css')?>
+		 <?=Html::cssFile('@web/assets/css/ace-skins.min.css')?>
+
+		<!-- <link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+ -->
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		 <!-- <script src="assets/js/ace-extra.min.js"></script> -->
+         <?=Html::jsFile('@web/assets/js/ace-extra.min.js')?>
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
 	<body>
-		<?php include('assets/pub_code/top.php');?>
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left">
+					<a href="#" class="navbar-brand">
+						<small>
+							<i class="icon-leaf"></i>
+							后台管理
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+	
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>欢迎光临,</small>
+									ADMIN
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="#">
+										<i class="icon-cog"></i>
+										设置
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-user"></i>
+										个人资料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="#">
+										<i class="icon-off"></i>
+										退出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
 
 		<div class="main-container" id="main-container">
 			<script type="text/javascript">
@@ -39,9 +140,138 @@ use yii\helpers\Url;
 						</div>
 					</div><!-- #sidebar-shortcuts -->
 
-					<?php include('assets/pub_code/menu.php');?>
-					
-					<!-- /.nav-list -->
+					<ul class="nav nav-list">
+						<li class="active">
+							<a href="index.html">
+								<i class="icon-dashboard"></i>
+								<span class="menu-text"> 后台控制台 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-desktop"></i>
+								<span class="menu-text"> 房源管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="release.html">
+										<i class="icon-double-angle-right"></i>
+										发布房源
+									</a>
+								</li>
+
+								<li>
+									<a href="record.html">
+										<i class="icon-double-angle-right"></i>
+										发布记录
+									</a>
+								</li>
+
+								<li>
+									<a href="refresh.html">
+										<i class="icon-double-angle-right"></i>
+										刷新记录
+									</a>
+								</li>
+
+								<li>
+									<a href="copy.html">
+										<i class="icon-double-angle-right"></i>
+										复制房源
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="dropdown-toggle">
+										<i class="icon-double-angle-right"></i>
+
+										账号设置
+										<b class="arrow icon-angle-down"></b>
+									</a>
+
+									<ul class="submenu">
+										<li>
+											<a href="account.html">
+												<i class="icon-leaf"></i>
+												账号记录
+											</a>
+										</li>
+
+										<li>
+											<a href="addaccount.html">
+												<i class="icon-leaf"></i>
+												添加账号
+											</a>
+										</li>
+
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list"></i>
+								<span class="menu-text"> 账户管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="money.html">
+										<i class="icon-double-angle-right"></i>
+										余额充值
+									</a>
+								</li>
+
+								<li>
+									<a href="recharge.html">
+										<i class="icon-double-angle-right"></i>
+										充值记录
+									</a>
+								</li>
+                                
+                                <li>
+									<a href="change.html">
+										<i class="icon-double-angle-right"></i>
+										密码设定
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-edit"></i>
+								<span class="menu-text"> 论坛管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="form-elements.html">
+										<i class="icon-double-angle-right"></i>
+										发布公告
+									</a>
+								</li>
+
+								<li>
+									<a href="form-wizard.html">
+										<i class="icon-double-angle-right"></i>
+										进入论坛
+									</a>
+								</li>
+
+							</ul>
+						</li>
+
+					</ul><!-- /.nav-list -->
 
 					<div class="sidebar-collapse" id="sidebar-collapse">
 						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>

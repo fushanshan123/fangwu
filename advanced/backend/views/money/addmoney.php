@@ -7,7 +7,8 @@ use yii\helpers\Url;
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include('assets/pub_code/head.php');?>
+	<?php include('assets/pub_code/head.php');?>
+
 	<body>
 		<?php include('assets/pub_code/top.php');?>
 
@@ -40,7 +41,6 @@ use yii\helpers\Url;
 					</div><!-- #sidebar-shortcuts -->
 
 					<?php include('assets/pub_code/menu.php');?>
-					
 					<!-- /.nav-list -->
 
 					<div class="sidebar-collapse" id="sidebar-collapse">
@@ -63,40 +63,50 @@ use yii\helpers\Url;
 								<i class="icon-home home-icon"></i>
 								<a href="#">首页</a>
 							</li>
-							<li class="active">后台管理控制台</li>
+							<li class="active">账号管理</li>
+                            <li class="active">余额充值</li>
 						</ul><!-- .breadcrumb -->
 					</div>
 
 					<div class="page-content">
 						<div class="page-header">
-							<h1>
-								控制台
-								<small>
-									<i class="icon-double-angle-right"></i>
-									 查看
-								</small>
-							</h1>
 						</div><!-- /.page-header -->
 
 						<div class="row">
-							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-
-								<div class="alert alert-block alert-success">
-									<button type="button" class="close" data-dismiss="alert">
-										<i class="icon-remove"></i>
-									</button>
-
-									<i class="icon-ok green"></i>
-
-									欢迎使用
-									<strong class="green">
-										安居客房源系统
-									<small>(v1.2)</small>
-									</strong>
-									,这里为你提供更更全面的房源信息管理.	
-							  </div>
-
+								<div class="text-center" style=" font-size:12px;">        
+										<div>
+											<ul class="accordion-style1">
+											<li class="li-new-mail text-left" >
+											<h3>    1、通过微信扫描左边二维码自动充值(支付成功后3秒刷新页面即可)
+											  </h3>
+												</li>
+											<li class="text-left">
+												<h3>2、通过转账到支付宝13588461234，备注填手机号自动充值
+												<h3>
+												</li>
+											
+											<li class="text-left">
+											  <h3>  3、10元起充，不要转1元以下零头，如果忘记填手机号，使用交易号充值
+												</h3></li>
+											<li class="text-left">
+											   <h3> 4、	交易号(订单号):  &nbsp;&nbsp;&nbsp;  <input  type="text" class="input-elm" />
+											   &nbsp;&nbsp;&nbsp;&nbsp;
+											   <button class="btn btn-info">充值</button>
+											   &nbsp;&nbsp;&nbsp;&nbsp;
+												<button class="btn btn-info">清空</button>	</h3>
+												</li>
+												<li class="text-left"><h3>
+											5、通过网银、财富通、ATM取款机、银行柜台转银行卡 </h3>
+												   <h5 style="color:#F18740">
+												   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;①工行:6222 0212 0204 0069 800(杭州市城东支行)<br></h5>
+												  <h5 style="color:#F18740"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;②建行:6217 0015 4000 0913 242(杭州市竞舟路支行)</h5>
+										   </li>
+										   <li class="text-left">
+										  <h3> 6、姓名:赵守超 微信:13567181234 电话:13567181234、13588461234</h3>
+										   </li>
+											</ul>
+									</div>
+								</div>
 
 
 
